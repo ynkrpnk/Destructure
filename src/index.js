@@ -56,9 +56,6 @@ const BOOKS = {
 };
 
 
-// за допомогою деструктуризації отримати третю книгу з масиву fantazy і зберегти її у змінну. Також зберегти у змінну ім’я автора четвертої книги з масиву scienceFiction.
-// Назви змінних: для книги — thirdBook, для автора — writer.
-// Потім по черзі вивести ці змінні в консоль для перевірки.
-// * Завдання підвищеної складності: реалізувати отримання даних в один рядок.
+const { fantazy: [, , {title:thirdBook}], scienceFiction: [, , , { author: writer }]} = BOOKS;
 
-function book ({})
+console.log(`ThirdBook is ${thirdBook} and fourth author is ${writer}`);
